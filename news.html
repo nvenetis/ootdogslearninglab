@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | Out of the Dogs learning lab</title>
+  <!-- Placeholder articles for now — keep out of Google until real posts are written -->
+  <meta name="robots" content="noindex, follow">
+  <link rel="icon" href="favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700;800&family=Mynerve&family=Playpen+Sans:wght@500;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="news-page">
+
+  <!-- Navigation -->
+  <nav class="nav nav--solid" id="navbar">
+    <div class="nav__container">
+      <a href="en/" class="nav__logo">
+        <img src="images/logo-ootd.png" alt="Out of the Dogs Learning Lab" class="nav__logo-img"><span class="nav__logo-text">Out of the Dogs <small>learning lab</small></span>
+      </a>
+      <ul class="nav__links" id="navLinks">
+        <li><a href="en/#about" class="nav__link">About</a></li>
+        <li><a href="en/#services" class="nav__link">Services</a></li>
+        <li><a href="en/#contact" class="nav__link">Contact</a></li>
+        <li><a href="news.html" class="nav__link nav__link--blog nav__link--active">Blog</a></li>
+      </ul>
+      <button class="nav__hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Blog Hero -->
+  <section class="blog-hero">
+    <div class="blog-hero__content">
+      <p class="section__eyebrow">Knowledge & Stories</p>
+      <h1 class="blog-hero__title">The Out of the Dogs Blog</h1>
+      <p>Tips, stories, and insights from the training field</p>
+    </div>
+  </section>
+
+  <!-- Search & Filter -->
+  <section class="blog-controls">
+    <div class="container">
+      <div class="blog-controls__inner">
+        <div class="search-box">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search articles..." class="search-input">
+          <button class="search-clear" id="searchClear" aria-label="Clear search"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="filter-btns" id="filterBtns">
+          <button class="filter-btn filter-btn--active" data-cat="all">All</button>
+          <button class="filter-btn" data-cat="training-tips">Training Tips</button>
+          <button class="filter-btn" data-cat="success-stories">Success Stories</button>
+          <button class="filter-btn" data-cat="education">Education</button>
+          <button class="filter-btn" data-cat="news">News</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Grid -->
+  <section class="section blog-section">
+    <div class="container">
+      <div class="blog__grid" id="blogGrid"></div>
+      <div class="blog__empty" id="blogEmpty" style="display:none">
+        <i class="fas fa-search"></i>
+        <p>No articles found. Try a different search or filter.</p>
+      </div>
+      <div class="blog__load-more" id="loadMoreWrap">
+        <button class="btn btn--outline" id="loadMoreBtn">Load More Articles</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="blog-newsletter">
+    <div class="container">
+      <div class="blog-newsletter__inner">
+        <div>
+          <h2>Never Miss a Post</h2>
+          <p>Get force-free training tips straight to your inbox.</p>
+        </div>
+        <form class="blog-newsletter__form" onsubmit="handleNewsletterSub(event)">
+          <input type="email" placeholder="Enter your email" required class="footer__input blog-newsletter__input">
+          <button type="submit" class="btn btn--primary">Subscribe Free</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="en/" class="nav__logo"><img src="images/logo-ootd.png" alt="Out of the Dogs Learning Lab" class="nav__logo-img"><span class="nav__logo-text">Out of the Dogs <small>learning lab</small></span></a>
+          <p>Empowering human-dog relationships through ethical, force-free, science-based training.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Navigate</h4>
+          <ul>
+            <li><a href="en/#about">About</a></li>
+            <li><a href="en/#services">Services</a></li>
+            <li><a href="news.html">Blog</a></li>
+            <li><a href="en/#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Popular Posts</h4>
+          <ul>
+            <li><a href="#">5 Mistakes New Dog Owners Make</a></li>
+            <li><a href="#">Teaching Your Dog to Come</a></li>
+            <li><a href="#">Understanding Dog Body Language</a></li>
+            <li><a href="#">Benefits of Group Classes</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Connect</h4>
+          <div class="contact__social">
+            <a href="#" class="social-btn" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-btn" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="social-btn" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" class="social-btn" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2026 Out of the Dogs learning lab. All rights reserved.</p>
+        <p>Made with love for dogs everywhere</p>
+      </div>
+    </div>
+  </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.14/dist/lenis.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script src="js/news.js"></script>
+</body>
+</html>
