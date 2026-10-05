@@ -675,7 +675,7 @@ html[lang="el"] .hero__title { font-size: clamp(2.1rem, 4.3vw, 4.4rem); }
   border-radius: 4px;
   box-shadow: 0 16px 34px rgba(30, 45, 47, .16), 0 2px 6px rgba(30, 45, 47, .08);
 }
-.polaroid img { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; }
+.polaroid img { width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; border-radius: 2px; }
 .polaroid::before {                  /* washi tape */
   content: '';
   position: absolute;
