@@ -652,20 +652,6 @@ html[lang="el"] .hero__title { font-size: clamp(2.1rem, 4.3vw, 4.4rem); }
 
 /* Field snapshots — taped polaroids under the portrait */
 .about__gallery { grid-area: gallery; align-self: start; margin-top: 60px; }
-.about__gallery-note {
-  display: flex;
-  align-items: flex-start;
-  justify-content: flex-end;
-  gap: 4px;
-  margin: 0 2% 10px 0;
-  font-family: var(--ff-hand);
-  font-size: 1.3rem;
-  line-height: 1.25;
-  color: var(--blue-ink);
-  rotate: -2deg;
-}
-.about__gallery-note span { max-width: 22ch; text-wrap: balance; }
-.about__gallery-arrow { flex: none; width: 56px; height: 45px; margin-top: 10px; color: var(--pink); }
 .polaroid {
   position: relative;
   width: 66%;
@@ -1328,7 +1314,6 @@ html[lang="el"] .hero__title { font-size: clamp(2.1rem, 4.3vw, 4.4rem); }
   .about__media { width: 100%; max-width: 440px; margin: 10px auto 52px; }
   .about__arrow { display: none; }
   .about__gallery { width: 100%; max-width: 520px; margin: 56px auto 0; }
-  .about__gallery-note { justify-content: center; margin-right: 0; }
   .about__polaroids { display: flex; align-items: flex-start; justify-content: space-between; }
   .polaroid { width: 48%; padding: 7px 7px 24px; }
   .polaroid--b { margin: 30px 0 0; }
