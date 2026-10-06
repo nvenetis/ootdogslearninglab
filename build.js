@@ -50,6 +50,11 @@ function structuredData(lang) {
     image: `${SITE_URL}/images/og-image.jpg`,
     telephone: PHONE,
     email: EMAIL,
+    sameAs: [
+      'https://www.instagram.com/ootdoglearninglab/',
+      'https://www.tiktok.com/@ootdoglearninglab',
+      'https://www.facebook.com/nikos.aigalew.9/',
+    ],
     address: {
       '@type': 'PostalAddress',
       addressLocality: t('seo.locality'),
