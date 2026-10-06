@@ -46,8 +46,10 @@ document.addEventListener('click', e => {
 });
 
 // ── Blog hero entrance ────────────────────────────────────────────────────────
-gsap.from('.blog-hero__title', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.2 });
-gsap.from('.blog-hero p',      { y: 30, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.45 });
+if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  gsap.from('.blog-hero__title', { y: 40, opacity: 0, duration: 0.9, ease: 'power3.out', delay: 0.2 });
+  gsap.from('.blog-hero p',      { y: 30, opacity: 0, duration: 0.7, ease: 'power3.out', delay: 0.45 });
+}
 
 // ── Fallback posts (used if API is unreachable) ───────────────────────────────
 const FALLBACK_POSTS = [
