@@ -12,7 +12,7 @@ const path = require('path');
 
 const SITE_URL = 'https://ootdogslearninglab.gr';
 const PHONE = '+306987044459';
-const EMAIL = 'ootdogslearninglab@gmail.com';
+const EMAIL = 'nvenetis@ootdogslearninglab.gr';
 
 const translations = require('./js/translations.js');
 const template = fs.readFileSync(path.join(__dirname, 'src/index.html'), 'utf8');
