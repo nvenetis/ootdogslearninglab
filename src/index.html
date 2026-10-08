@@ -193,7 +193,7 @@
             <p class="contact__desc" data-i18n="contact.desc">desc</p>
             <div class="contact__details">
               <div class="contact__row"><div class="contact__ico"><i class="fas fa-phone"></i></div><div><strong data-i18n="contact.phone">Phone</strong><a href="tel:+306987044459">6987044459</a></div></div>
-              <div class="contact__row"><div class="contact__ico"><i class="fas fa-envelope"></i></div><div><strong data-i18n="contact.email">Email</strong><a href="mailto:nvenetis@ootdogslearninglab.gr">nvenetis@<wbr>ootdogslearninglab.gr</a></div></div>
+              <div class="contact__row"><div class="contact__ico"><i class="fas fa-envelope"></i></div><div><strong data-i18n="contact.email">Email</strong><a href="mailto:nvenetis@ootdoglearninglab.gr">nvenetis@<wbr>ootdoglearninglab.gr</a></div></div>
               <div class="contact__row"><div class="contact__ico"><i class="fas fa-map-marker-alt"></i></div><div><strong data-i18n="contact.location">Location</strong><span data-i18n="contact.locationValue">Egaleo, Athens</span></div></div>
             </div>
             <div class="contact__social">
@@ -203,10 +203,11 @@
               <a href="https://www.tiktok.com/@ootdoglearninglab" class="social-btn" aria-label="TikTok" target="_blank" rel="noopener"><i class="fab fa-tiktok"></i></a>
             </div>
           </div>
-          <form class="contact__form reveal-right" id="contactForm" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
-            <input type="hidden" name="form-name" value="contact">
+          <form class="contact__form reveal-right" id="contactForm" name="contact" method="POST">
+            <input type="hidden" name="_subject" value="Νέο μήνυμα από την ιστοσελίδα">
+            <input type="hidden" name="_template" value="table">
             <input type="hidden" name="language" value="{{lang}}">
-            <p hidden><label>Leave empty: <input name="bot-field"></label></p>
+            <p hidden><label>Leave empty: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
             <div class="form-group">
               <input type="text" class="form-input" id="fname" name="name" placeholder=" " required>
               <label class="form-label" for="fname" data-i18n="contact.formName">Name</label>
@@ -271,10 +272,10 @@
         <div class="footer__col">
           <h2 class="footer__heading" data-i18n="footer.newsletter">Newsletter</h2>
           <p data-i18n="footer.newsletterDesc">Tips</p>
-          <form class="footer__sub" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field" onsubmit="handleFooterSub(event)">
-            <input type="hidden" name="form-name" value="newsletter">
+          <form class="footer__sub" name="newsletter" method="POST" onsubmit="handleFooterSub(event)">
+            <input type="hidden" name="_subject" value="Νέα εγγραφή στο newsletter">
             <input type="hidden" name="language" value="{{lang}}">
-            <p hidden><label>Leave empty: <input name="bot-field"></label></p>
+            <p hidden><label>Leave empty: <input name="_honey" tabindex="-1" autocomplete="off"></label></p>
             <input type="email" name="email" data-i18n-placeholder="footer.newsletterPlaceholder" data-i18n-aria="footer.newsletterPlaceholder" placeholder="Your email" class="footer__input" required>
             <button type="submit" class="btn btn--primary" data-i18n="footer.go">Go</button>
           </form>

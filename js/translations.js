@@ -112,7 +112,7 @@ var translations = {
       sendBtn: 'Αποστολή Μηνύματος',
       sending: 'Αποστολή…',
       successMsg: 'Το μήνυμα εστάλη! Θα επικοινωνήσω μαζί σας εντός 24 ωρών.',
-      errorMsg: 'Κάτι πήγε στραβά. Στείλτε μου email στο nvenetis@ootdogslearninglab.gr ή καλέστε στο 6987044459.',
+      errorMsg: 'Κάτι πήγε στραβά. Στείλτε μου email στο nvenetis@ootdoglearninglab.gr ή καλέστε στο 6987044459.',
     },
     footer: {
       tagline: 'Ενισχύοντας τις σχέσεις ανθρώπου-σκύλου μέσω ηθικής, επιστημονικής εκπαίδευσης χωρίς καταναγκασμό.',
@@ -233,7 +233,7 @@ var translations = {
       sendBtn: 'Send Message',
       sending: 'Sending…',
       successMsg: "Message sent! I'll be in touch within 24 hours.",
-      errorMsg: 'Something went wrong. Please email nvenetis@ootdogslearninglab.gr or call 6987044459.',
+      errorMsg: 'Something went wrong. Please email nvenetis@ootdoglearninglab.gr or call 6987044459.',
     },
     footer: {
       tagline: 'Empowering human-dog relationships through ethical, force-free, science-based training.',

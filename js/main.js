@@ -189,15 +189,22 @@ gsap.utils.toArray('.blog-card').forEach((card, i) => {
   });
 });
 
-// ── Forms → Netlify Forms ────────────────────────────────────────────────────
-// Netlify picks up any <form data-netlify="true"> at deploy time and stores
-// submissions (with email notifications) — see Site → Forms in Netlify.
-function submitNetlifyForm(form) {
-  return fetch('/', {
+// ── Forms → FormSubmit ───────────────────────────────────────────────────────
+// The site is on GitHub Pages (static, can't receive POSTs), so submissions go
+// to formsubmit.co, which emails them to FORM_EMAIL. The very first submission
+// triggers a one-time activation email that must be confirmed.
+const FORM_EMAIL = 'nvenetis@ootdoglearninglab.gr';
+
+function submitForm(form) {
+  return fetch(`https://formsubmit.co/ajax/${FORM_EMAIL}`, {
     method: 'POST',
-    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-    body: new URLSearchParams(new FormData(form)).toString(),
-  }).then(res => { if (!res.ok) throw new Error(`HTTP ${res.status}`); });
+    headers: { Accept: 'application/json' },
+    body: new FormData(form),
+  })
+    .then(res => res.json().then(data => ({ ok: res.ok, data })))
+    .then(({ ok, data }) => {
+      if (!ok || String(data.success) !== 'true') throw new Error(data.message || 'Form submission failed');
+    });
 }
 
 const contactForm = document.getElementById('contactForm');
@@ -212,7 +219,7 @@ if (contactForm) {
     btn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> ${t('contact.sending')}`;
 
     try {
-      await submitNetlifyForm(contactForm);
+      await submitForm(contactForm);
       contactForm.reset();
       status.textContent = `✓ ${t('contact.successMsg')}`;
       status.style.borderColor = '';
@@ -237,7 +244,7 @@ async function handleFooterSub(e) {
   const btn  = form.querySelector('button');
   btn.disabled = true;
   try {
-    await submitNetlifyForm(form);
+    await submitForm(form);
     form.reset();
     btn.textContent = t('footer.done');
   } catch {

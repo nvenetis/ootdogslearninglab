@@ -2,4 +2,4 @@ User-agent: *
 Allow: /
 Disallow: /src/
 
-Sitemap: https://ootdogslearninglab.gr/sitemap.xml
+Sitemap: https://ootdoglearninglab.gr/sitemap.xml

@@ -10,9 +10,9 @@
 const fs = require('fs');
 const path = require('path');
 
-const SITE_URL = 'https://ootdogslearninglab.gr';
+const SITE_URL = 'https://ootdoglearninglab.gr';
 const PHONE = '+306987044459';
-const EMAIL = 'nvenetis@ootdogslearninglab.gr';
+const EMAIL = 'nvenetis@ootdoglearninglab.gr';
 
 const translations = require('./js/translations.js');
 const template = fs.readFileSync(path.join(__dirname, 'src/index.html'), 'utf8');
